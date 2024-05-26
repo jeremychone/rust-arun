@@ -1,0 +1,13 @@
+[workspace.lints.rust]
+unsafe_code = "forbid"
+# unused = "allow" # For experimental dev.
+
+[workspace]
+resolver = "2"
+members = [
+    "arun", # The library
+    "arun-cli", # The CLI
+]
+
+[workspace.dependencies]
+derive_more = {version = "1.0.0-beta", features = ["from", "display"] }

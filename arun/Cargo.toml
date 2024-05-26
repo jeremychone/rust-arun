@@ -1,0 +1,27 @@
+[package]
+name = "arun"
+version = "0.1.0-alpha.1"
+edition = "2021"
+rust-version = "1.78"
+license = "MIT OR Apache-2.0"
+description = "Library & Command-line runner tool"
+categories = ["command-line-utilities"]
+homepage = "https://github.com/jeremychone/rust-arun"
+repository = "https://github.com/jeremychone/rust-arun"
+
+[lints]
+workspace = true
+
+[dependencies]
+# -- Async
+tokio = { version = "1", features = ["full"] }
+# -- Json/Toml
+serde = "1"
+serde_derive = "1"
+toml = "0.8"
+# -- Text
+aho-corasick = "1"
+regex = "1.6"
+# -- Others
+derive_more = { workspace = true }
+sysinfo = "0.30"

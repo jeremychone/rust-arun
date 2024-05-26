@@ -1,0 +1,28 @@
+[package]
+name = "arun-cli"
+version = "0.1.0-alpha.1"
+authors = ["Jeremy Chone <jeremy.chone@gmail.com>"]
+license = "MIT OR Apache-2.0"
+description = "Library & Command-line runner tool."
+categories = ["command-line-utilities"]
+edition = "2021"
+rust-version = "1.78"
+homepage = "https://github.com/jeremychone/rust-arun"
+repository = "https://github.com/jeremychone/rust-arun"
+
+[lints]
+workspace = true
+
+[[bin]]
+name = "arun"
+path = "src/main.rs"
+
+[dependencies]
+# -- App Libs
+arun = { version = "=0.1.0-alpha.1", path = "../arun" }
+# -- Async
+tokio = { version = "1", features = ["full"] }
+# -- CLI
+clap =  {version = "4", features = ["cargo"]}
+# -- Others
+derive_more = { workspace = true }
