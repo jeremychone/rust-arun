@@ -6,14 +6,14 @@ use std::path::Path;
 use std::{fs, mem};
 use toml::{Table, Value}; // Wide for now.
 
-const AWESOME_FILE_NAME: &str = "arun.toml";
+const ARUN_FILE_NAME: &str = "arun.toml";
 
 const KEY_RUNNERS: &str = "runners";
 const KEY_RUNNER: &str = "runner";
 
 pub fn find_and_parse_arun_toml(root_dir: &Path) -> Result<Config> {
 	// --- Create if not present.
-	let arun_file = root_dir.join(AWESOME_FILE_NAME);
+	let arun_file = root_dir.join(ARUN_FILE_NAME);
 	if !arun_file.is_file() {
 		return Err(Error::ArunTomlNotFound);
 	}
