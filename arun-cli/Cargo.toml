@@ -1,6 +1,6 @@
 [package]
 name = "arun-cli"
-version = "0.1.0-alpha.1"
+version = "0.1.0"
 authors = ["Jeremy Chone <jeremy.chone@gmail.com>"]
 license = "MIT OR Apache-2.0"
 description = "Library & Command-line runner tool."
@@ -19,7 +19,7 @@ path = "src/main.rs"
 
 [dependencies]
 # -- App Libs
-arun = { version = "=0.1.0-alpha.1", path = "../arun" }
+arun = { version = "=0.1.0", path = "../arun" }
 # -- Async
 tokio = { version = "1", features = ["full"] }
 # -- CLI
